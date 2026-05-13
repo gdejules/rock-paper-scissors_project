@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="app.js" defer></script>
+    <style>
+      html {
+        margin-left: 200px;
+        margin-right: 200px;
+        outline: 2px solid grey;
+        box-sizing: border-box;
+      }
+
+      #game-panel {
+        background-color: seashell;
+        border: 2px solid lightseagreen;
+        border-radius: 4px;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1 style="text-align: center">Let's Play Rock Paper Scissors!</h1>
+    <h2 style="text-align: center">Press this button whenever you are ready</h2>
+    <div id="game-panel">
+      <button
+        style="
+          flex-basis: auto;
+          width: 160px;
+          height: auto;
+          padding: 8px;
+          margin-top: 12px;
+          font-family: &quot;Courier New&quot;, Courier, monospace;
+          font-size: large;
+          font-weight: 600;
+          background-color: navy;
+          color: whitesmoke;
+        "
+      >
+        Start Play
+      </button>
+    </div>
+  </body>
 </html>

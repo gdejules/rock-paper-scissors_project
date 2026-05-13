@@ -59,9 +59,10 @@ function playGame() {
   console.log("Computer selects " + computerSelection);
   console.log("Human selects " + humanSelection);
 }
-
+/*
 playGame();
 playGame();
 playGame();
 playGame();
 playGame();
+*/
