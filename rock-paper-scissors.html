@@ -5,111 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="app.js" defer></script>
-    <style>
-      * {
-        outline: 2px solid grey;
-      }
-      html {
-        margin-left: 200px;
-        margin-right: 200px;
-        box-sizing: border-box;
-      }
-
-      #game-panel {
-        background-color: seashell;
-        border: 2px solid lightseagreen;
-        border-radius: 4px;
-        width: 100%;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1 style="text-align: center">Let's Play Rock Paper Scissors!</h1>
     <h2 style="text-align: center">
       Press Rock, Paper, or Scissors button to start the game
     </h2>
-    <div
-      id="game-panel"
-      style="
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        padding-top: 40px;
-      "
-    >
-      <ul
-        style="
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          gap: 40px;
-        "
-      >
+    <div id="game-panel">
+      <ul id="play-button">
         <li>
-          <button
-            style="
-              flex-basis: auto;
-              width: 160px;
-              height: auto;
-              padding: 8px;
-              margin-top: 12px;
-              font-family: &quot;Courier New&quot;, Courier, monospace;
-              font-size: large;
-              font-weight: 600;
-              background-color: gray;
-              color: navy;
-              border: 3px solid white;
-              border-radius: 8px;
-            "
-          >
-            ROCK 🪨
-          </button>
+          <button id="rock-button">ROCK 🪨</button>
         </li>
         <li>
-          <button
-            style="
-              flex-basis: auto;
-              width: 160px;
-              height: auto;
-              padding: 8px;
-              margin-top: 12px;
-              font-family: &quot;Courier New&quot;, Courier, monospace;
-              font-size: large;
-              font-weight: 600;
-              background-color: whitesmoke;
-              color: navy;
-              border: 3px solid white;
-              border-radius: 8px;
-            "
-          >
-            PAPER 📜
-          </button>
+          <button id="paper-button">PAPER 📜</button>
         </li>
         <li>
-          <button
-            style="
-              flex-basis: auto;
-              width: 160px;
-              height: auto;
-              padding: 8px;
-              margin-top: 12px;
-              font-family: &quot;Courier New&quot;, Courier, monospace;
-              font-size: large;
-              font-weight: 600;
-              background-color: orange;
-              color: navy;
-              border: 3px solid white;
-              border-radius: 8px;
-            "
-          >
-            SCISSORS ✂️
-          </button>
+          <button id="scissors-button">SCISSORS ✂️</button>
         </li>
       </ul>
       <div>

@@ -1,0 +1,56 @@
+* {
+  /* outline: 2px solid grey; */
+  box-sizing: border-box;
+}
+
+html {
+  margin-left: 200px;
+  margin-right: 200px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game-panel {
+  background-color: seashell;
+  border: 2px solid lightseagreen;
+  border-radius: 4px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+#play-button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+}
+
+#play-button button {
+  flex-basis: auto;
+  width: 160px;
+  height: auto;
+  padding: 8px;
+  margin-top: 12px;
+  font-size: large;
+  font-weight: 600;
+  border: 3px solid white;
+  border-radius: 8px;
+  color: navy;
+  cursor: pointer;
+}
+
+#rock-button {
+  background-color: gray;
+}
+
+#paper-button {
+  background-color: whitesmoke;
+}
+
+#scissors-button {
+  background-color: orange;
+}
