@@ -6,10 +6,12 @@
     <title>Document</title>
     <script src="app.js" defer></script>
     <style>
+      * {
+        outline: 2px solid grey;
+      }
       html {
         margin-left: 200px;
         margin-right: 200px;
-        outline: 2px solid grey;
         box-sizing: border-box;
       }
 
@@ -30,8 +32,25 @@
     <h2 style="text-align: center">
       Press Rock, Paper, or Scissors button to start the game
     </h2>
-    <div id="game-panel">
-      <ul style="list-style: none; display: flex; gap: 40px">
+    <div
+      id="game-panel"
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 40px;
+      "
+    >
+      <ul
+        style="
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 40px;
+        "
+      >
         <li>
           <button
             style="
@@ -93,6 +112,13 @@
           </button>
         </li>
       </ul>
+      <div>
+        <h2>SCORE</h2>
+        <span class="score"
+          >HUMAN: <span class="human-score"></span> VS COMPUTER:
+          <span class="computer-score"></span
+        ></span>
+      </div>
     </div>
   </body>
 </html>
