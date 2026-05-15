@@ -17,8 +17,10 @@ html {
   height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding-top: 40px;
+  padding-bottom: 64px;
 }
 
 #play-button {
@@ -43,14 +45,26 @@ html {
   cursor: pointer;
 }
 
-#rock-button {
+#rock {
   background-color: gray;
 }
 
-#paper-button {
+#paper {
   background-color: whitesmoke;
 }
 
-#scissors-button {
+#scissors {
   background-color: orange;
+}
+
+.winner {
+  font-size: 28px;
+  color: blue;
+  font-weight: 600;
+}
+
+.final {
+  font-size: 40px;
+  color: blue;
+  font-weight: 800;
 }
