@@ -11,9 +11,15 @@ const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
+// round winner announcement UI
 let winner = document.createElement("span");
 winner.setAttribute("class", "winner");
 panel.insertBefore(winner, score);
+
+// 5 round winner announcement UI
+let final = document.createElement("span");
+final.setAttribute("class", "final");
+panel.insertBefore(final, score);
 
 // add event listener to the button to get human choice and make custom event
 allBtn.addEventListener("click", (e) => {
@@ -56,50 +62,38 @@ allBtn.addEventListener("play", () => {
   getComputerChoice();
   playRound(computerChoice, humanChoice);
   updateScore(computerScore, humanScore);
+  stopGame(computerScore, humanScore);
 });
 
 function playRound(computerChoice, humanChoice) {
   winner.textContent = "";
 
   if (computerChoice === "rock" && humanChoice === "paper") {
-    winner.textContent = "You win (Paper > Rock)!";
+    winner.textContent = `You win this round! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
     humanScore += 1;
   } else if (computerChoice === "rock" && humanChoice === "scissors") {
-    winner.textContent = "You lose (Scissors < Rock)!";
+    winner.textContent = `You lose this round! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
     computerScore += 1;
   } else if (computerChoice === "rock" && humanChoice === "rock") {
-    winner.textContent = "It's a tie (Rock = Rock)!";
+    winner.textContent = `It's a tie! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
   } else if (computerChoice === "paper" && humanChoice === "paper") {
-    winner.textContent = "It's a tie (Paper = Paper)!";
+    winner.textContent = `It's a tie! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
   } else if (computerChoice === "paper" && humanChoice === "scissors") {
-    winner.textContent = "You win (Scissors > Paper)!";
+    winner.textContent = `You win this round! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
     humanScore += 1;
   } else if (computerChoice === "paper" && humanChoice === "rock") {
-    winner.textContent = "You lose (Rock < Paper)!";
+    winner.textContent = `You lose this round! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
     computerScore += 1;
   } else if (computerChoice === "scissors" && humanChoice === "scissors") {
-    winner.textContent = "It's a tie (Scissors = Scissors)!";
+    winner.textContent = `It's a tie! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
   } else if (computerChoice === "scissors" && humanChoice === "paper") {
-    winner.textContent = "You lose (Paper < Scissors)!";
+    winner.textContent = `You lose this round! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
     computerScore += 1;
   } else if (computerChoice === "scissors" && humanChoice === "rock") {
-    winner.textContent = "You win (Rock > Scissors)!";
+    winner.textContent = `You win this round! You choose ${humanChoice}, Computer choose ${computerChoice}.`;
     humanScore += 1;
   }
-
   /*
-  let final = document.createElement("span");
-  final.setAttribute("class", "final");
-
-  if ((humanScore = 5)) {
-    final.textContent = "Human Win!";
-    panel.insertBefore(final, winner);
-    stopGame(computerScore, humanScore);
-  } else if ((computerScore = 5)) {
-    final.textContent = "Computer Win!";
-    panel.insertBefore(final, winner);
-    stopGame(computerScore, humanScore);
-  }
   console.log(`Human score: ${humanScore}\nComputer score: ${computerScore}`);
   */
 }
@@ -112,13 +106,20 @@ function updateScore(computerScore, humanScore) {
   computerUi.textContent = `${computerScore}`;
 }
 
-/*
 function stopGame(computerScore, humanScore) {
-  rock.setAttribute("disabled", "true");
-  paper.setAttribute("disabled", "true");
-  scissors.setAttribute("disabled", "true");
+  if (humanScore === 5) {
+    final.textContent = "You win the game!";
+    rock.setAttribute("disabled", "true");
+    paper.setAttribute("disabled", "true");
+    scissors.setAttribute("disabled", "true");
+  } else if (computerScore === 5) {
+    final.textContent = "Computer win the game!";
+    rock.setAttribute("disabled", "true");
+    paper.setAttribute("disabled", "true");
+    scissors.setAttribute("disabled", "true");
+  }
 }
-
+/*
 console.log("Computer selects " + computerSelection);
 console.log("Human selects " + humanSelection);
 */

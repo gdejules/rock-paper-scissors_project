@@ -19,8 +19,8 @@ html {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 64px;
+  padding-top: 28px;
+  padding-bottom: 40px;
 }
 
 #play-button {
@@ -58,13 +58,41 @@ html {
 }
 
 .winner {
-  font-size: 28px;
-  color: blue;
-  font-weight: 600;
+  font-size: 24px;
+  color: gray;
+  font-weight: 500;
 }
 
 .final {
-  font-size: 40px;
-  color: blue;
-  font-weight: 800;
+  font-size: 36px;
+  color: goldenrod;
+  font-weight: 700;
+}
+
+#score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: lightsalmon;
+  border: 2px solid brown;
+  border-radius: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 480px;
+}
+
+#score:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.score-detail {
+  font-size: 28px;
+  font-weight: 600;
+  color: darkslategrey;
 }
